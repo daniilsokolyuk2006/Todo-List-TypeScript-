@@ -1,6 +1,8 @@
 import ToDoList from "./components/ToDoList"
 import type { TodoItem } from "./types/todo"
 import { useState } from "react"
+import AddForm from "./components/AddForm"
+
 
 
 const App = () => {
@@ -10,11 +12,10 @@ const App = () => {
 
   return (
     <>
+    
+    <AddForm setTodos={setTodos}/>
 
-    <ToDoList
-    todos ={todos}
-    setTodos = {setTodos}
-    />
+    <ToDoList todos ={todos} setTodos = {setTodos} />
 
     </>
   )
